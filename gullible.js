@@ -92,7 +92,7 @@ Gullible.prototype.estimateWithTokens = function(tokens, cls) {
  */ 
 Gullible.prototype.estimate = function(text, cls) {
   var tokens = this.tokenize(text);
-  return this.estimateWithTokens(tokens, cls);
+  return this.estimateWithTokens(tokens, cls) / tokens.length;
 };
 
 /**
