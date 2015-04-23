@@ -136,8 +136,8 @@ Gullible.toJSON = function(classifier) {
 /**
  * Restores the classifier from JSON string.
  */
-Gullible.fromJSON = function(str) {
-  var classifier = new Gullible();
+Gullible.fromJSON = function(str, opts) {
+  var classifier = new Gullible(opts);
   var data = JSON.parse(str);
   for (var key in data) {
     if (data.hasOwnProperty(key)) {
