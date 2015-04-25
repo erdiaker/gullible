@@ -3,10 +3,21 @@ Gullible
 
 A naive Bayes text classifier in JavaScript.
 
+### Installation
+The easiest way is to use `npm`:
+```sh
+npm install gullible
+```
+
+Alternatively, you can clone the `git` repository:
+```sh
+git clone https://github.com/erdiaker/gullible.git
+```
+
 ### Examples
 ```js
 // Load module
-var Gullible = require('./gullible.js');
+var Gullible = require('gullible');
 
 // Create a new classifier instance
 var c = new Gullible();
