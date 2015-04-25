@@ -1,0 +1,32 @@
+{
+  "name": "gullible",
+  "version": "0.0.0",
+  "description": "A naive Bayes text classifier.",
+  "main": "gullible.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.4"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erdiaker/gullible.git"
+  },
+  "keywords": [
+    "naive",
+    "Bayes",
+    "classifier"
+  ],
+  "author": "Erdi Aker <erdiaker@gmail.com> (https://github.com/erdiaker)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erdiaker/gullible/issues"
+  },
+  "homepage": "https://github.com/erdiaker/gullible"
+}
