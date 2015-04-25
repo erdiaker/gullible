@@ -67,7 +67,7 @@ Gullible.prototype.unlearn = function(text, cls) {
  * between a list of words and a class.
  */
 Gullible.prototype.estimateWithTokens = function(tokens, cls) {
-  // p(text | cls) ~ p(cls) * [ p(word1 | cls) * ... * p(wordn | cls) ]
+  // p(cls | text) ~ p(cls) * [ p(word1 | cls) * ... * p(wordn | cls) ]
   // p(word | cls) ~ #{word in cls} / #{all words in cls}
 
   // work with log probabilities to prevent any underflow
@@ -116,6 +116,27 @@ Gullible.prototype.classify = function(text) {
 };
 
 /**
+ * Getter for classes
+ */
+Gullible.prototype.getClasses = function() {
+  return Object.keys(this.scCls);
+};
+
+/**
+ * Getter for words
+ */
+Gullible.prototype.getWords = function() {
+  return Object.keys(this.wcWordCls);
+};
+
+/**
+ * Getter for sample count
+ */
+Gullible.prototype.getSampleCount = function() {
+  return this.sc;
+};
+
+/**
  * Default tokenization method. 
  * Removes any non-word characters. Converts to lowercase.  
  * Splits at white-space.
@@ -150,3 +171,4 @@ Gullible.fromJSON = function(str, opts) {
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
   module.exports = Gullible;
 }
+
